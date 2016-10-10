@@ -1,5 +1,5 @@
 class Complement
-  def self.of_dna(strand)
+  def self.of_dna strand
     return "" unless strand =~ /^[GCTA]*$/
     strand.tr('GCTA', 'CGAU')
   end
