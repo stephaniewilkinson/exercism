@@ -1,10 +1,8 @@
 class Complement
   def self.of_dna(strand)
-    if strand
-      return strand.tr('GCTA', 'CGAU')
-    else
-      return strand
-    end
+    newstrand = ""
+    strand.each_char {|c| /[CGTA]/ =~c ? (newstrand = newstrand + c) : false }
+    return newstrand.tr('GCTA', 'CGAU')
   end
 end
 
