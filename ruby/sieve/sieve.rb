@@ -8,12 +8,14 @@ class Sieve
 
   def primes
     array_of_primes = []
+    not_primes = []
 
     1.upto @given_limit do |num1|
       1.upto num1 do |num2|
-        unless (num1 % num2 == 0)
+        if (num2 % num1 != 0)
           array_of_primes.push(num1)
         end
+        # binding.pry
       end
     end
 
