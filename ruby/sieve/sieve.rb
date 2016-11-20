@@ -8,7 +8,6 @@ class Sieve
 
   def primes
     array_of_primes = []
-    not_primes = []
 
     1.upto @given_limit do |num1|
       1.upto num1 do |num2|
